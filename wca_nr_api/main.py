@@ -120,7 +120,7 @@ if __name__ == '__main__':
             # Announce new records in Discord
             for nr in new_records:
                 print(nr)
-                send_record_announcement(nr)
+                # send_record_announcement(nr)
 
             # Save new storage to file
             new_storage.to_json()
