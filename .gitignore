@@ -1,0 +1,17 @@
+# Virtual environments
+env/
+venv/
+virtual_env/
+virtual_environments/
+
+# From project
+wca_nr_api/logs
+wca_nr_api/storage
+wca_nr_api/exports
+wca_nr_api/database
+
+# Python cache
+**/__pycache__
+
+# Environment variables
+.env

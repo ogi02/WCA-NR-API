@@ -1,0 +1,20 @@
+ENVIRONMENT_FOLDER = ".."
+EXPECTED_ENV_VARS = ["WCA_COUNTRY", "SMTP_SERVER", "SMTP_PORT", "SENDER_EMAIL",
+                     "SENDER_PASSWORD", "RECIPIENT_EMAIL", "WEBHOOK_URL", "ROLE_ID"]
+
+EXPORTS_FOLDER = "exports"
+EXPORTS_ARCHIVE_FILENAME = "export.sql.zip"
+EXPORTS_METADATA_FILENAME = "metadata.json"
+EXPORTS_READ_ME_FILENAME = "README.md"
+EXPORTS_SQL_FILENAME = "WCA_export.sql"
+FILTERED_EXPORTS_SQL_FILENAME = "filtered_WCA_export.sql"
+
+RECORDS_FOLDER = "storage"
+RECORDS_FILENAME = "records.json"
+
+DATABASE_FOLDER = "database"
+DATABASE_FILENAME = "database.db"
+
+LOGS_FOLDER = "logs"
+
+TABLE_FILTERS = ["Persons", "RanksAverage", "RanksSingle"]

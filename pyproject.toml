@@ -1,0 +1,9 @@
+[project]
+name = "wca_nr_api"
+description = "API for extracting WCA National Records for Bulgaria"
+version = "0.1.0"
+authors = [{ name = "Ognian Baruh", email = "ognian@baruh.net" }]
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]
