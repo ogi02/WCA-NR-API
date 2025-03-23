@@ -1,0 +1,314 @@
+{
+    "metadata": {
+        "export_format_version": "1.0.0",
+        "export_date": "2025-03-21 00:01:48 UTC"
+    },
+    "records": {
+        "333": [
+            {
+                "person_id": "2018VICH01",
+                "name": "Ivaylo Ivaylov Vichev",
+                "gender": "MALE",
+                "result": 541,
+                "event": "333",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2018VICH01",
+                "name": "Ivaylo Ivaylov Vichev",
+                "gender": "MALE",
+                "result": 706,
+                "event": "333",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "222": [
+            {
+                "person_id": "2022STEF06",
+                "name": "Yoan Stefanov",
+                "gender": "MALE",
+                "result": 62,
+                "event": "222",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 163,
+                "event": "222",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "444": [
+            {
+                "person_id": "2018VICH01",
+                "name": "Ivaylo Ivaylov Vichev",
+                "gender": "MALE",
+                "result": 2625,
+                "event": "444",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2018VICH01",
+                "name": "Ivaylo Ivaylov Vichev",
+                "gender": "MALE",
+                "result": 3111,
+                "event": "444",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "555": [
+            {
+                "person_id": "2018VICH01",
+                "name": "Ivaylo Ivaylov Vichev",
+                "gender": "MALE",
+                "result": 5516,
+                "event": "555",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2018VICH01",
+                "name": "Ivaylo Ivaylov Vichev",
+                "gender": "MALE",
+                "result": 6125,
+                "event": "555",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "666": [
+            {
+                "person_id": "2018VICH01",
+                "name": "Ivaylo Ivaylov Vichev",
+                "gender": "MALE",
+                "result": 11396,
+                "event": "666",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2018VICH01",
+                "name": "Ivaylo Ivaylov Vichev",
+                "gender": "MALE",
+                "result": 12118,
+                "event": "666",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "777": [
+            {
+                "person_id": "2018VICH01",
+                "name": "Ivaylo Ivaylov Vichev",
+                "gender": "MALE",
+                "result": 18134,
+                "event": "777",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2018VICH01",
+                "name": "Ivaylo Ivaylov Vichev",
+                "gender": "MALE",
+                "result": 18841,
+                "event": "777",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "333bf": [
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 4430,
+                "event": "333bf",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 5137,
+                "event": "333bf",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "333fm": [
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 27,
+                "event": "333fm",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2022BARU03",
+                "name": "Ognian Baruh",
+                "gender": "MALE",
+                "result": 27,
+                "event": "333fm",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 3200,
+                "event": "333fm",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "333oh": [
+            {
+                "person_id": "2022RICH11",
+                "name": "Alexander Richetta",
+                "gender": "MALE",
+                "result": 952,
+                "event": "333oh",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2022RICH11",
+                "name": "Alexander Richetta",
+                "gender": "MALE",
+                "result": 1216,
+                "event": "333oh",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "clock": [
+            {
+                "person_id": "2022ARAN03",
+                "name": "Gabriel Arangelov",
+                "gender": "MALE",
+                "result": 484,
+                "event": "clock",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2019IANK01",
+                "name": "Viktor Iankov",
+                "gender": "MALE",
+                "result": 667,
+                "event": "clock",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "minx": [
+            {
+                "person_id": "2018TENE01",
+                "name": "Alexander Tenev",
+                "gender": "MALE",
+                "result": 4919,
+                "event": "minx",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2022HADZ01",
+                "name": "Victor Hadzhibeev",
+                "gender": "MALE",
+                "result": 5490,
+                "event": "minx",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "pyram": [
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 223,
+                "event": "pyram",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2023DIMI05",
+                "name": "Aleksandar Dimitrov",
+                "gender": "MALE",
+                "result": 362,
+                "event": "pyram",
+                "result_type": "AVERAGE"
+            },
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 362,
+                "event": "pyram",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "skewb": [
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 138,
+                "event": "skewb",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2018KOST01",
+                "name": "Kristina Kostova",
+                "gender": "FEMALE",
+                "result": 387,
+                "event": "skewb",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "sq1": [
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 637,
+                "event": "sq1",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 1004,
+                "event": "sq1",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "444bf": [
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 25043,
+                "event": "444bf",
+                "result_type": "SINGLE"
+            },
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 34715,
+                "event": "444bf",
+                "result_type": "AVERAGE"
+            }
+        ],
+        "555bf": [
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 63000,
+                "event": "555bf",
+                "result_type": "SINGLE"
+            }
+        ],
+        "333mbf": [
+            {
+                "person_id": "2018YUAN02",
+                "name": "Anqi Yu",
+                "gender": "MALE",
+                "result": 870324501,
+                "event": "333mbf",
+                "result_type": "SINGLE"
+            }
+        ]
+    }
+}
