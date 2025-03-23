@@ -26,6 +26,15 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Execute NR API
+      env:
+        WCA_COUNTRY: ${{ secrets.WCA_COUNTRY }}
+        SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+        SMTP_PORT: ${{ secrets.SMTP_PORT }}
+        SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+        SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+        RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+        ROLE_ID: ${{ secrets.ROLE_ID }}
       run: |
         cd wca_nr_api
         python main.py
