@@ -17,14 +17,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    # Set up Python 3.13
     - name: Set up Python 3.13
       uses: actions/setup-python@v3
       with:
         python-version: "3.13"
+    # Install dependencies
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    # Execute the WCA NR API
     - name: Execute NR API
       env:
         WCA_COUNTRY: ${{ secrets.WCA_COUNTRY }}
@@ -38,18 +41,17 @@ jobs:
       run: |
         cd wca_nr_api
         python main.py
+    # Get list of changed files
     - name: Get Changed Files
       id: changed-files
       uses: tj-actions/changed-files@823fcebdb31bb35fdf2229d9f769b400309430d0
-
+    # Push the new records.json file if it was changed during the API execution
     - name: Push If There Are Updated Records
       env:
         ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
       run: |
         for file in ${ALL_CHANGED_FILES}; do
-          echo "$file was changed"
           if [[ "$file" == "wca_nr_api/storage/records.json" ]]; then
-            echo "In here"
             git config --global user.name "ogi02"
             git config --global user.email "ogi02@users.noreply.github.com"
             git status
