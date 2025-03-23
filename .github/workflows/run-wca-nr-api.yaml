@@ -48,11 +48,12 @@ jobs:
       run: |
         for file in ${ALL_CHANGED_FILES}; do
           echo "$file was changed"
-          if [[ "$file" == "*storage/records.json*" ]]; then
+          if [[ "$file" == "wca_nr_api/storage/records.json" ]]; then
+            echo "In here"
             git config --global user.name "ogi02"
             git config --global user.email "ogi02@users.noreply.github.com"
             git status
-            git add storage/records.json
+            git add wca_nr_api/storage/records.json
             git commit -m "Updated records"
             git push
           fi
