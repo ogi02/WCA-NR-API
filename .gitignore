@@ -5,9 +5,12 @@ virtual_env/
 virtual_environments/
 
 # From project
-wca_nr_api/logs
-wca_nr_api/exports
-wca_nr_api/database
+wca_nr_api/logs/*
+!wca_nr_api/logs/.gitkeep
+wca_nr_api/exports/*
+!wca_nr_api/exports/.gitkeep
+wca_nr_api/database/*
+!wca_nr_api/database/.gitkeep
 
 # Python cache
 **/__pycache__
