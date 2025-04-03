@@ -1,9 +1,9 @@
 name: WCA NR API
 
 # Every day at 4:00 AM
-on:
-   schedule:
-     - cron: "0 4 * * *"
+# on:
+   # schedule:
+     # - cron: "0 4 * * *"
 
 # "Write" permissions, so that the workflow can push changes
 permissions:
