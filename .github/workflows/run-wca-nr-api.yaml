@@ -57,25 +57,10 @@ jobs:
           if [[ "$file" == "wca_nr_api/storage/records.json" ]]; then
             git config --global user.name "ogi02"
             git config --global user.email "ogi02@users.noreply.github.com"
+            git pull
             git status
-            git add wca_nr_api/storage/records.json
+            git add wca_nr_api/storage/records.json wca_nr_api/backup/records*
             git commit -m "GitHub Action Workflow Updated Records"
-            git push
-          fi
-        done
-    # Push a backup of the new records.json file if it was changed during the API execution
-    - name: Backup New Records
-      env:
-        ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-      run: |
-        for file in ${ALL_CHANGED_FILES}; do
-          echo "$file"
-          if [[ "$file" == "wca_nr_api/backup/records*" ]]; then
-            git config --global user.name "ogi02"
-            git config --global user.email "ogi02@users.noreply.github.com"
-            git status
-            git add wca_nr_api/backup/records*
-            git commit -m "GitHub Action Workflow Backed Records Up"
             git push
           fi
         done
