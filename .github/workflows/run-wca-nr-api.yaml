@@ -5,6 +5,11 @@ name: WCA NR API
    # schedule:
      # - cron: "0 4 * * *"
 
+on:
+  push:
+    branches:
+      - main
+
 # "Write" permissions, so that the workflow can push changes
 permissions:
   contents: write
@@ -43,7 +48,7 @@ jobs:
       id: changed-files
       uses: tj-actions/changed-files@823fcebdb31bb35fdf2229d9f769b400309430d0
     # Push the new records.json file if it was changed during the API execution
-    - name: Push If There Are Updated Records
+    - name: Update New Records
       env:
         ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
       run: |
@@ -55,6 +60,22 @@ jobs:
             git status
             git add wca_nr_api/storage/records.json
             git commit -m "GitHub Action Workflow Updated Records"
+            git push
+          fi
+        done
+    # Push a backup of the new records.json file if it was changed during the API execution
+    - name: Backup New Records
+      env:
+        ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
+      run: |
+        for file in ${ALL_CHANGED_FILES}; do
+          echo "$file"
+          if [[ "$file" == "wca_nr_api/backup/records*" ]]; then
+            git config --global user.name "ogi02"
+            git config --global user.email "ogi02@users.noreply.github.com"
+            git status
+            git add wca_nr_api/backup/records*
+            git commit -m "GitHub Action Workflow Backed Records Up"
             git push
           fi
         done
