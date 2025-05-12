@@ -1,5 +1,6 @@
 # Python dependencies
 import os
+import shutil
 
 # Project dependencies
 from wca_nr_api.classes.records import Records
@@ -124,6 +125,17 @@ if __name__ == '__main__':
             # Save new storage to file
             new_storage.to_json()
             logger.info(f"Saved new records to {os.path.join(RECORDS_FOLDER, RECORDS_FILENAME)}")
+
+            # Keep a backup of the records file if there are new records
+            if new_records:
+                # Source
+                source = os.path.join(RECORDS_FOLDER, RECORDS_FILENAME)
+                # Destination
+                backup_date = new_storage.metadata.get("export_date").split(' ')[0]
+                destination = os.path.join(BACKUP_FOLDER, BACKUP_FILENAME.format(date=backup_date))
+                # Make a backup
+                shutil.copyfile(source, destination, follow_symlinks=False)
+                logger.info(f"Saved backup of new records to {destination}")
 
             # Clear files and folders
             clear_files()

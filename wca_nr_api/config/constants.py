@@ -12,6 +12,9 @@ FILTERED_EXPORTS_SQL_FILENAME = "filtered_WCA_export.sql"
 RECORDS_FOLDER = "storage"
 RECORDS_FILENAME = "records.json"
 
+BACKUP_FOLDER = "backup"
+BACKUP_FILENAME = "records-{date}.json"
+
 DATABASE_FOLDER = "database"
 DATABASE_FILENAME = "database.db"
 
