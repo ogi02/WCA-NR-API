@@ -52,12 +52,12 @@ jobs:
       env:
         ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
       run: |
+        git pull
         for file in ${ALL_CHANGED_FILES}; do
           echo "$file"
           if [[ "$file" == "wca_nr_api/storage/records.json" ]]; then
             git config --global user.name "ogi02"
             git config --global user.email "ogi02@users.noreply.github.com"
-            git pull
             git status
             git add wca_nr_api/storage/records.json wca_nr_api/backup/records*
             git commit -m "GitHub Action Workflow Updated Records"
