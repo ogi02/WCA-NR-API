@@ -1,9 +1,9 @@
 name: WCA NR API
 
-# Every day at 4:00 AM
+# Every day at 2:00 AM
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "0 2 * * *"
 
 # On push to main "branch" - If needed for debugging
 # on:
@@ -20,13 +20,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+        fetch-depth: 0
     # Set up Python 3.13
     - name: Set up Python 3.13
       uses: actions/setup-python@v3
       with:
         python-version: "3.13"
-        persist-credentials: false
-        fetch-depth: 0
     # Install dependencies
     - name: Install Dependencies
       run: |
