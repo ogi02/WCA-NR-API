@@ -3,7 +3,7 @@ name: WCA NR API
 # Every day at 4:00 AM
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "*/5 * * * *"
 
 # On push to main "branch" - If needed for debugging
 # on:
@@ -49,7 +49,7 @@ jobs:
       id: changed-files
       uses: tj-actions/changed-files@823fcebdb31bb35fdf2229d9f769b400309430d0
       with:
-        fetch-depth: 0
+        fetch_depth: 0
     # Push the new records.json file if it was changed during the API execution
     - name: Update New Records
       env:
