@@ -58,6 +58,9 @@ def clear_files() -> None:
                 logger.info(f"Deleted folder: {file_path}")
             # If file
             elif os.path.isfile(file_path) or os.path.islink(file_path):
+                # Do not delete .gitkeep
+                if filename == ".gitkeep":
+                    continue
                 os.remove(file_path)
                 logger.info(f"Deleted file: {file_path}")
         except Exception as e:
