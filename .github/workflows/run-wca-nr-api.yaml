@@ -56,12 +56,11 @@ jobs:
     - name: Check For Changes
       run: |
         git status
-        git diff
-        git add wca_nr_api/storage/records.json wca_nr_api/backup/records*
         if git diff --cached --quiet; then
           echo "No changes to commit"
           exit 0
         fi
+        git add wca_nr_api/storage/records.json wca_nr_api/backup/records*
     # Commit and push changes
     - name: Commit & Push Changes
       env:
