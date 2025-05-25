@@ -3,7 +3,7 @@ name: WCA NR API
 on:
   schedule:
     # Every 10 minutes - for development
-    - cron: "*/10 * * * *"
+    # - cron: "*/10 * * * *"
     # Every day at 2 AM - for production
     - cron: "0 2 * * *"
 
