@@ -1,8 +1,10 @@
 name: WCA NR API
 
-# Every day at 2:00 AM
 on:
   schedule:
+    # Every 10 minutes - for development
+    - cron: "*/10 * * * *"
+    # Every day at 2 AM - for production
     - cron: "0 2 * * *"
 
 # On push to main "branch" - If needed for debugging
@@ -52,24 +54,18 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-    # Check for changes in the file with records
+    # Check for changes in the file with records / commit and push
     - name: Check For Changes
-      run: |
-        shopt -s nullglob
-        files_to_add=(wca_nr_api/storage/records.json wca_nr_api/backup/records*)
-        if [ ${#files_to_add[@]} -eq 0 ]; then
-          echo "No files to add"
-          exit 0
-        fi
-        git add "${files_to_add[@]}"
-        if git diff --cached --quiet; then
-          echo "No changes to commit"
-          exit 0
-        fi
-    # Commit and push changes
-    - name: Commit & Push Changes
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git commit -m "GitHub Actions Workflow Updated Records"
+        files_to_add=(wca_nr_api/storage/records.json wca_nr_api/backup/records*)
+        git add "${files_to_add[@]}"
+        if git diff --cached --quiet;
+        then
+          echo "No changes to commit"
+          exit 0
+        else
+          git commit -m "GitHub Actions Workflow Updated Records"
         git push https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
+        fi

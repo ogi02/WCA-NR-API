@@ -124,7 +124,7 @@ if __name__ == '__main__':
 
             # Save new storage to file
             new_storage.to_json()
-            logger.info(f"Saved new records to {os.path.join(RECORDS_FOLDER, RECORDS_FILENAME)}")
+            logger.info(f"Saved new version of records to {os.path.join(RECORDS_FOLDER, RECORDS_FILENAME)}")
 
             # Keep a backup of the records file if there are new records
             if new_records:
