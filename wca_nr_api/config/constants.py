@@ -20,4 +20,7 @@ DATABASE_FILENAME = "database.db"
 
 LOGS_FOLDER = "logs"
 
-TABLE_FILTERS = ["Persons", "RanksAverage", "RanksSingle"]
+TABLE_PERSONS = "persons"
+TABLE_RANKS_AVERAGE = "ranks_average"
+TABLE_RANKS_SINGLE = "ranks_single"
+TABLE_FILTERS = [TABLE_PERSONS, TABLE_RANKS_AVERAGE, TABLE_RANKS_SINGLE]

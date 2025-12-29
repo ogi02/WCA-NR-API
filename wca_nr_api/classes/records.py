@@ -5,6 +5,7 @@ from typing import Any, Self
 from wca_nr_api.classes.event import Event
 from wca_nr_api.classes.record import Record
 from wca_nr_api.classes.result_type import ResultType
+from wca_nr_api.config.constants import TABLE_PERSONS, TABLE_RANKS_AVERAGE, TABLE_RANKS_SINGLE
 from wca_nr_api.config.logger import logger
 from wca_nr_api.utils.database import DB
 
@@ -66,10 +67,10 @@ class Records:
 
         with DB() as database:
             # Execute SELECT query on the database
-            rows = database.execute("SELECT p.id, p.name, p.gender, rs.eventId, rs.best FROM RanksSingle AS rs "
-                                    "INNER JOIN Persons AS p "
-                                    "ON rs.personId = p.id").fetchall()
-            logger.info("Successfully executed SELECT query on `RanksSingle` table.")
+            rows = database.execute(f"SELECT p.wca_id, p.name, p.gender, rs.event_id, rs.best FROM {TABLE_RANKS_SINGLE} AS rs "
+                                    f"INNER JOIN {TABLE_PERSONS} AS p "
+                                    "ON rs.person_id = p.wca_id").fetchall()
+            logger.info(f"Successfully executed SELECT query on `{TABLE_RANKS_SINGLE}` table.")
 
             # Create a "Record" class for each row and append it to the records if it is valid
             for row in rows:
@@ -86,10 +87,10 @@ class Records:
 
         with DB() as database:
             # Execute SELECT query on the database
-            rows = database.execute("SELECT p.id, p.name, p.gender, rs.eventId, rs.best FROM RanksAverage AS rs "
-                                    "INNER JOIN Persons AS p "
-                                    "ON rs.personId = p.id").fetchall()
-            logger.info("Successfully executed SELECT query on `RanksAverage` table.")
+            rows = database.execute(f"SELECT p.wca_id, p.name, p.gender, ra.event_id, ra.best FROM {TABLE_RANKS_AVERAGE} AS ra "
+                                    f"INNER JOIN {TABLE_PERSONS} AS p "
+                                    "ON ra.person_id = p.wca_id").fetchall()
+            logger.info(f"Successfully executed SELECT query on `{TABLE_RANKS_AVERAGE}` table.")
 
             # Create a "Record" class for each row and append it to the records if it is valid
             for row in rows:

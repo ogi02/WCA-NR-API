@@ -67,13 +67,13 @@ def filter_sql_dump(table_filters: dict[str, Any]) -> None:
                     break
 
                 if in_insert == table:
-                    # For RanksSingle and RanksAverage take only NRs
-                    if in_insert in ("RanksSingle", "RanksAverage"):
+                    # For ranks single and ranks average tables take only NRs
+                    if in_insert in (TABLE_RANKS_AVERAGE, TABLE_RANKS_SINGLE):
                         if int(stripped_line.strip("(),;").split(",")[-1]) == 1:
                             insert_values.append(stripped_line.rstrip(',;'))
 
                     # For Persons take only Bulgaria
-                    if in_insert == "Persons":
+                    if in_insert == TABLE_PERSONS:
                         if os.environ["WCA_COUNTRY"] in stripped_line:
                             insert_values.append(stripped_line.rstrip(',;'))
 

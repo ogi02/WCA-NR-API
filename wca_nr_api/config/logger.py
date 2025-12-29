@@ -16,7 +16,7 @@ logging.basicConfig(
     filename=logger_filename,
     encoding="utf-8",
     filemode="a",
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    format="%(asctime)s - %(name)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s",
     datefmt="%d-%m-%y %H:%M:%S",
 )
 
