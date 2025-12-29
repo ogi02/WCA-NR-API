@@ -1,6 +1,7 @@
 # Virtual environments
 env/
 venv/
+.venv/
 virtual_env/
 virtual_environments/
 
@@ -17,3 +18,10 @@ wca_nr_api/database/*
 
 # Environment variables
 .env
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
