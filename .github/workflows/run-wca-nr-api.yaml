@@ -1,6 +1,7 @@
 name: WCA NR API
 
 on:
+  workflow_dispatch:
   schedule:
     # Every 10 minutes - for development
     # - cron: "*/10 * * * *"
